@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Valentine for Bidishaaa 💖</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/> 
+  
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Pacifico&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary-pink: #ff4d6d;
+      --secondary-pink: #ff85a1;
+      --glass: rgba(255, 255, 255, 0.2);
+    }
+
+    html, body { height: 100%; margin: 0; padding: 0; overflow: hidden; }
+
+    body {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: radial-gradient(circle, #d4a5ff 0%, #b780eb 100%);
+      font-family: 'Poppins', sans-serif;
+      transition: background 1.5s ease;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    /* 🌈 Rainbow Animation */
+    .rainbow-text { animation: colorCycle 3s infinite linear; }
+    @keyframes colorCycle {
+      0% { color: #00ff00; } 25% { color: #ffff00; }
+      50% { color: #00bfff; } 75% { color: #ff69b4; }
+      100% { color: #00ff00; }
+    }
+
+    /* 📸 Photo Styles */
+    .photo-frame {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      border: 4px solid white;
+      overflow: hidden;
+      margin-bottom: 20px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+      z-index: 10;
+      background: #eee;
+    }
+    .photo-frame img { width: 100%; height: 100%; object-fit: cover; }
+
+    #page1, #page2 {
+      z-index: 10;
+      width: 100%;
+      max-width: 500px;
+    }
+
+    h1 { font-family: 'Pacifico', cursive; font-size: 28px; text-shadow: 2px 2px 4px rgba(0,0,0,0.2); }
+    .subtext { font-family: 'Dancing Script', cursive; font-size: 24px; margin-bottom: 20px; }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    button {
+      padding: 15px 35px;
+      font-size: 18px;
+      border-radius: 50px;
+      border: none;
+      cursor: pointer;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    #yes { 
+      background: white; 
+      color: var(--primary-pink); 
+      animation: pulse 1.5s infinite;
+    }
+    
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.08); }
+      100% { transform: scale(1); }
+    }
+
+    #no { background: #666; color: white; }
+
+    /* 🎁 Floating Decorations */
+    .item {
+      position: absolute;
+      font-size: 40px;
+      animation: floatItem 4s ease-in-out infinite;
+      z-index: 5;
+    }
+    .teddy { left: 10%; top: 15%; animation-delay: 0s; }
+    .choco { right: 10%; top: 15%; animation-delay: 1s; }
+    .rose1 { left: 15%; bottom: 15%; animation-delay: 2s; }
+    .rose2 { right: 15%; bottom: 15%; animation-delay: 3s; }
+
+    @keyframes floatItem {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-20px) rotate(10deg); }
+    }
+
+    /* PAGE 2 Glassmorphism */
+    #page2 { display: none; }
+    
+    #secret {
+      display: none;
+      margin-top: 20px;
+      background: rgba(255, 255, 255, 0.15);
+      padding: 30px;
+      border-radius: 25px;
+      backdrop-filter: blur(15px);
+      border: 1px solid rgba(255,255,255,0.3);
+      line-height: 1.6;
+    }
+
+    #waBtn {
+      background: #25D366;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 50px;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 20px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .heart, .name {
+      position: absolute;
+      bottom: -60px;
+      animation: heartFloat 5s linear forwards;
+    }
+
+    @keyframes heartFloat {
+      to { transform: translateY(-120vh) rotate(360deg); opacity: 0; }
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="valentine-items" id="decorations">
+  <div class="item teddy">🧸</div>
+  <div class="item choco">🍫</div>
+  <div class="item rose1">🌹</div>
+  <div class="item rose2">🌹</div>
+</div>
+
+<div id="page1">
+  <div class="photo-frame">
+    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Lucky" alt="Us">
+  </div>
+  <h1>Bidishaaa, Will you be my Valentine? <span class="rainbow-text">❤️</span></h1>
+  <p class="subtext">Pretty please? 🥺</p>
+  <div class="buttons">
+    <button id="yes">Yes ❤️</button>
+    <button id="no">No 😜</button>
+  </div>
+</div>
+
+<div id="page2">
+  <h1>I Love You Forever! 💘</h1>
+  <p class="subtext">Love from Sayan</p>
+  <h1>Waiting for your Answer...</h1>
+
+  <button id="surpriseBtn" style="background: white; color: #ff2f6d; border-radius: 50px;">Click for a Surprise</button>
+
+  <div id="secret">
+    <p>💌 <i>"If love be sin, then gladly am I lost;<br>
+    If truth be sworn, let this my vow remain:<br>
+    Whilst breath still warms this ever-faithful chest,<br>
+    My heart is thine, and thine alone, amen."</i> 💌</p>
+    <p>See you soon, Gulu ✨</p>
+
+    <a id="waBtn" href="https://wa.me/918436312171?text=Yes!%20I%20will%20be%20your%20Valentine!%20❤️✨" target="_blank">
+      Reply on WhatsApp 📱
+    </a>
+  </div>
+</div>
+
+<div class="hearts-layer"></div>
+<div class="name-layer"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+<script>
+  const yesBtn = document.getElementById('yes');
+  const noBtn = document.getElementById('no');
+  const page1 = document.getElementById('page1');
+  const page2 = document.getElementById('page2');
+  const decorations = document.getElementById('decorations');
+  const surpriseBtn = document.getElementById('surpriseBtn');
+  const secret = document.getElementById('secret');
+  const heartsLayer = document.querySelector('.hearts-layer');
+  const nameLayer = document.querySelector('.name-layer');
+
+  let yesScale = 1;
+  function moveNo() {
+    noBtn.style.position = 'fixed';
+    noBtn.style.left = Math.random() * 70 + 'vw';
+    noBtn.style.top = Math.random() * 70 + 'vh';
+    yesScale += 0.2;
+    yesBtn.style.transform = `scale(${yesScale})`;
+  }
+
+  noBtn.addEventListener('mouseover', moveNo);
+  noBtn.addEventListener('touchstart', moveNo);
+
+  function spawnHeart() {
+    const h = document.createElement('div');
+    h.className = 'heart';
+    h.textContent = ['❤️','💖','✨','🌸'][Math.floor(Math.random()*4)];
+    h.style.left = Math.random() * 100 + 'vw';
+    h.style.fontSize = (Math.random() * 20 + 20) + 'px';
+    heartsLayer.appendChild(h);
+    setTimeout(() => h.remove(), 5000);
+  }
+  setInterval(spawnHeart, 400);
+
+  function spawnName() {
+    const n = document.createElement('div');
+    n.className = 'name';
+    n.textContent = 'Gulu ❤️';
+    n.style.left = Math.random() * 100 + 'vw';
+    n.style.color = 'white';
+    n.style.fontSize = '20px';
+    n.style.fontWeight = 'bold';
+    nameLayer.appendChild(n);
+    setTimeout(() => n.remove(), 5000);
+  }
+
+  yesBtn.onclick = () => {
+    confetti({ particleCount: 200, spread: 100, origin: { y: 0.6 } });
+    page1.style.display = 'none';
+    decorations.style.display = 'none';
+    document.body.style.background = 'linear-gradient(180deg, #ff4d4d, #ff9eb8)';
+    page2.style.display = 'block';
+    setInterval(spawnName, 700);
+  };
+
+  surpriseBtn.onclick = () => {
+    secret.style.display = 'block';
+    surpriseBtn.style.display = 'none';
+    confetti({ particleCount: 150, spread: 70 });
+  };
+</script>
+
+</body>
+</html>
